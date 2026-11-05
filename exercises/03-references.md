@@ -18,8 +18,11 @@ a.birthday();
 System.out.println(a.getAge() + " " + b.getAge());
 ```
 Picture:
+a-----> rex and is 3
+b-----> rex and is 3
 
-Output:
+
+Output:3 3
 
 ## Snippet 2
 ```java
@@ -29,8 +32,9 @@ a.birthday();
 System.out.println(b.getAge());
 ```
 Picture:
-
-Output:
+a------> rex and is 3
+b------> rex and is 3
+Output:3
 
 ## Snippet 3
 ```java
@@ -41,7 +45,8 @@ b.birthday();
 System.out.println(a.getAge() + " " + b.getName());
 ```
 Picture:
-
+a-----> mia and is 1
+b-----> mia and is 1
 Output:
 
 ## Snippet 4
@@ -52,8 +57,11 @@ s = s + "!";
 System.out.println(s + " " + t);
 ```
 Picture:
+s-----> Java1
+t-----> Java
 
-Output:
+
+Output:Java! Java
 
 ## Snippet 5
 ```java
@@ -63,8 +71,11 @@ y++;
 System.out.println(x + " " + y);
 ```
 Picture:
+x---->5
+y---->x(5) 
+y++----> 6
 
-Output:
+Output:5 6
 
 ## Snippet 6
 ```java
@@ -74,8 +85,11 @@ a = null;
 System.out.println(b.getName());
 ```
 Picture:
+a----> rex and is 3
+b----> rex and is 3
+a----> null 
 
-Output:
+Output:rex
 
 ## Snippet 7 (this one crashes)
 ```java
@@ -85,19 +99,21 @@ a = null;
 b = null;
 System.out.println(a.getName());
 ```
-- Exception name:
-- Line that crashes:
-- Which variable is null?
-- Your fix (one line of code):
+- Exception name:NullPointerExeption 
+- Line that crashes:last line
+- Which variable is null?both but only a is being used
+- Your fix (one line of code): take out a = null
 
 ## Snippet 8: write your own
 Write a snippet where two variables alias one `Pet`, then explain its output in two sentences.
 
 ```java
-// your snippet here
-```
-
-Explanation:
+Pet a = new Pet("james", 9);
+Pet b = a
+Pet c = a 
+System.out.println(a.getName() + " " + b.getName() + " " + c.getName());
+System.out.println(a.getAge() + " " + b.getAge() + " " + c.getAge());
+Explanation:We made an original pet and then made two copys of that pet (a) and we made two lines of print with their ages and their names. 
 
 ## Checked my predictions
 Which snippets did I get wrong, and what was I assuming?
